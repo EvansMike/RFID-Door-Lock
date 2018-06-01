@@ -1,25 +1,112 @@
-EAGLE AutoRouter Statistics:
-
-Job           : /home/mikee/Projects/rfid-door/hardware/sesame-03.brd
-
-Start at      : 06:49:32 (30/04/2014)
-End at        : 06:49:44 (30/04/2014)
-Elapsed time  : 00:00:12
-
-Signals       :    24   RoutingGrid: 50 mil  Layers: 1
-Connections   :    52   predefined:  17 ( 0 Vias )
-
-Router memory :   5880
-
-Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
-
-Time per pass     :  00:00:11  00:00:00  00:00:00  00:00:01  00:00:00
-Number of Ripups  :       132         0         0         0         0
-max. Level        :         5         0         0         0         0
-max. Total        :        14         0         0         0         0
-
-Routed            :        24        24        24        24        24
-Vias              :         0         0         0         0         0
-Resolution        :    78.8 %    78.8 %    78.8 %    78.8 %    78.8 %
-
-Final             : 53.8% finished. Polygons may have fallen apart.
+update=Fri 01 Jun 2018 09:08:17 BST
+version=1
+last_client=kicad
+[pcbnew]
+version=1
+LastNetListRead=
+UseCmpFile=1
+PadDrill=0.600000000000
+PadDrillOvalY=0.600000000000
+PadSizeH=1.500000000000
+PadSizeV=1.500000000000
+PcbTextSizeV=1.500000000000
+PcbTextSizeH=1.500000000000
+PcbTextThickness=0.300000000000
+ModuleTextSizeV=1.000000000000
+ModuleTextSizeH=1.000000000000
+ModuleTextSizeThickness=0.150000000000
+SolderMaskClearance=0.000000000000
+SolderMaskMinWidth=0.000000000000
+DrawSegmentWidth=0.200000000000
+BoardOutlineThickness=0.100000000000
+ModuleOutlineThickness=0.150000000000
+[cvpcb]
+version=1
+NetIExt=net
+[eeschema]
+version=1
+LibDir=
+[eeschema/libraries]
+LibName1=sesame-03-rescue
+LibName2=/home/mikee/Projects/kicad_sources/kicad-library/library/74xgxx
+LibName3=/home/mikee/Projects/kicad_sources/kicad-library/library/74xx
+LibName4=/home/mikee/Projects/kicad_sources/kicad-library/library/ac-dc
+LibName5=/home/mikee/Projects/kicad_sources/kicad-library/library/actel
+LibName6=/home/mikee/Projects/kicad_sources/kicad-library/library/adc-dac
+LibName7=/home/mikee/Projects/kicad_sources/kicad-library/library/Altera
+LibName8=/home/mikee/Projects/kicad_sources/kicad-library/library/analog_devices
+LibName9=/home/mikee/Projects/kicad_sources/kicad-library/library/analog_switches
+LibName10=/home/mikee/Projects/kicad_sources/kicad-library/library/atmel
+LibName11=/home/mikee/Projects/kicad_sources/kicad-library/library/audio
+LibName12=/home/mikee/Projects/kicad_sources/kicad-library/library/battery_management
+LibName13=/home/mikee/Projects/kicad_sources/kicad-library/library/bbd
+LibName14=/home/mikee/Projects/kicad_sources/kicad-library/library/brooktre
+LibName15=/home/mikee/Projects/kicad_sources/kicad-library/library/cmos4000
+LibName16=/home/mikee/Projects/kicad_sources/kicad-library/library/cmos_ieee
+LibName17=/home/mikee/Projects/kicad_sources/kicad-library/library/conn
+LibName18=/home/mikee/Projects/kicad_sources/kicad-library/library/contrib
+LibName19=/home/mikee/Projects/kicad_sources/kicad-library/library/cypress
+LibName20=/home/mikee/Projects/kicad_sources/kicad-library/library/dc-dc
+LibName21=/home/mikee/Projects/kicad_sources/kicad-library/library/device
+LibName22=/home/mikee/Projects/kicad_sources/kicad-library/library/digital-audio
+LibName23=/home/mikee/Projects/kicad_sources/kicad-library/library/diode
+LibName24=/home/mikee/Projects/kicad_sources/kicad-library/library/display
+LibName25=/home/mikee/Projects/kicad_sources/kicad-library/library/dsp
+LibName26=/home/mikee/Projects/kicad_sources/kicad-library/library/elec-unifil
+LibName27=/home/mikee/Projects/kicad_sources/kicad-library/library/ESD_Protection
+LibName28=/home/mikee/Projects/kicad_sources/kicad-library/library/ftdi
+LibName29=/home/mikee/Projects/kicad_sources/kicad-library/library/gennum
+LibName30=/home/mikee/Projects/kicad_sources/kicad-library/library/graphic
+LibName31=/home/mikee/Projects/kicad_sources/kicad-library/library/hc11
+LibName32=/home/mikee/Projects/kicad_sources/kicad-library/library/intel
+LibName33=/home/mikee/Projects/kicad_sources/kicad-library/library/interface
+LibName34=/home/mikee/Projects/kicad_sources/kicad-library/library/ir
+LibName35=/home/mikee/Projects/kicad_sources/kicad-library/library/Lattice
+LibName36=/home/mikee/Projects/kicad_sources/kicad-library/library/linear
+LibName37=/home/mikee/Projects/kicad_sources/kicad-library/library/logo
+LibName38=/home/mikee/Projects/kicad_sources/kicad-library/library/maxim
+LibName39=/home/mikee/Projects/kicad_sources/kicad-library/library/memory
+LibName40=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip
+LibName41=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_dspic33dsc
+LibName42=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_pic10mcu
+LibName43=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_pic12mcu
+LibName44=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_pic16mcu
+LibName45=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_pic18mcu
+LibName46=/home/mikee/Projects/kicad_sources/kicad-library/library/microchip_pic32mcu
+LibName47=/home/mikee/Projects/kicad_sources/kicad-library/library/microcontrollers
+LibName48=/home/mikee/Projects/kicad_sources/kicad-library/library/motor_drivers
+LibName49=/home/mikee/Projects/kicad_sources/kicad-library/library/motorola
+LibName50=/home/mikee/Projects/kicad_sources/kicad-library/library/msp430
+LibName51=/home/mikee/Projects/kicad_sources/kicad-library/library/nordicsemi
+LibName52=/home/mikee/Projects/kicad_sources/kicad-library/library/nxp_armmcu
+LibName53=/home/mikee/Projects/kicad_sources/kicad-library/library/onsemi
+LibName54=/home/mikee/Projects/kicad_sources/kicad-library/library/opto
+LibName55=/home/mikee/Projects/kicad_sources/kicad-library/library/Oscillators
+LibName56=/home/mikee/Projects/kicad_sources/kicad-library/library/philips
+LibName57=/home/mikee/Projects/kicad_sources/kicad-library/library/power
+LibName58=/home/mikee/Projects/kicad_sources/kicad-library/library/powerint
+LibName59=/home/mikee/Projects/kicad_sources/kicad-library/library/Power_Management
+LibName60=/home/mikee/Projects/kicad_sources/kicad-library/library/pspice
+LibName61=/home/mikee/Projects/kicad_sources/kicad-library/library/references
+LibName62=/home/mikee/Projects/kicad_sources/kicad-library/library/regul
+LibName63=/home/mikee/Projects/kicad_sources/kicad-library/library/relays
+LibName64=/home/mikee/Projects/kicad_sources/kicad-library/library/rfcom
+LibName65=/home/mikee/Projects/kicad_sources/kicad-library/library/sensors
+LibName66=/home/mikee/Projects/kicad_sources/kicad-library/library/silabs
+LibName67=/home/mikee/Projects/kicad_sources/kicad-library/library/siliconi
+LibName68=/home/mikee/Projects/kicad_sources/kicad-library/library/stm8
+LibName69=/home/mikee/Projects/kicad_sources/kicad-library/library/stm32
+LibName70=/home/mikee/Projects/kicad_sources/kicad-library/library/supertex
+LibName71=/home/mikee/Projects/kicad_sources/kicad-library/library/switches
+LibName72=/home/mikee/Projects/kicad_sources/kicad-library/library/texas
+LibName73=/home/mikee/Projects/kicad_sources/kicad-library/library/transf
+LibName74=/home/mikee/Projects/kicad_sources/kicad-library/library/transistors
+LibName75=/home/mikee/Projects/kicad_sources/kicad-library/library/ttl_ieee
+LibName76=/home/mikee/Projects/kicad_sources/kicad-library/library/valves
+LibName77=/home/mikee/Projects/kicad_sources/kicad-library/library/video
+LibName78=/home/mikee/Projects/kicad_sources/kicad-library/library/Worldsemi
+LibName79=/home/mikee/Projects/kicad_sources/kicad-library/library/Xicor
+LibName80=/home/mikee/Projects/kicad_sources/kicad-library/library/xilinx
+LibName81=/home/mikee/Projects/kicad_sources/kicad-library/library/Zilog
+[general]
+version=1
