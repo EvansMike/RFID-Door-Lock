@@ -68,8 +68,8 @@ INT1 = PD3 = pin5 = DATA1
 uint8_t data_length = 0 ;
 uint32_t card_num = 0;
 uint8_t active = 1;
-#define INT0 PD2
-#define INT1 PD3
+#define DATA0 PD2
+#define DATA1 PD3
 
 // Define static functions here.
 static void wiegand_on(void);
@@ -83,9 +83,9 @@ wiegand_enable ()
 {
     SFIOR = 0;
     // Make sure we're set to inputs
-    DDRD |= _BV(INT0) | _BV(INT1);
+    DDRD &= ~_BV(DATA0) & ~_BV(DATA1);
     // Enable internal pullups by writing to the pins
-    PORTD |= _BV(INT0) | _BV(INT1);
+    PORTD |= _BV(DATA0) | _BV(DATA1);
     //Set PCINT0 bit in pin change mask register PCMSK0
     MCUCR |= (1 << ISC11) | (1 << ISC01);
     GICR |= (1 << INT0) | (1 << INT1);
