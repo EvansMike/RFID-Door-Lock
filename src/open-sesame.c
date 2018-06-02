@@ -80,6 +80,9 @@ unsigned char messageBuf[4];
 #define LED_R PC0
 #define RELAY PC5
 #define SWITCH PC4
+#define READER_LED PD5
+#define READER_BEEP PD6
+
 // Next two are defined in wiegand.c, here for reference.
 #define W0 PD2
 #define W1 PD3
@@ -257,6 +260,7 @@ actionRFID (char *rfid)
             USARTputs(buffer);
             //free(command);
             free (buffer);
+            rfid = 0;
             return;
         }
         if (strncmp (rfid, buffer, idlen) == 0)
@@ -356,10 +360,14 @@ access_denied (void)
     USARTputs ("ACCESS DENIED\r\n");
     USARTputs (EOM);
     IOPORT |= (1 << LED_R); //&= ~0x0F;//led ON and relay ON
+    PORTD &= ~_BV(READER_BEEP); // ON
     _delay_ms (1000);
+    PORTD |= _BV(READER_BEEP); // OFF
     _delay_ms (1000);
+    PORTD &= ~_BV(READER_BEEP); // ON
     _delay_ms (1000);//TODO Uncomment for real thing
     _delay_ms (1000);
+    PORTD |= _BV(READER_BEEP); // OFF
     IOPORT &= ~(1 << LED_R);    //0x40;//led OFF
     USARTputs ("TRY AGAIN?\r\n");
     USARTputs(EOM);
@@ -376,11 +384,13 @@ access_allowed (void)
     // Light GREEN LED
     IOPORT |= (1 << LED_G); //&= ~0x0F;//led ON
     IOPORT |= (1 << RELAY); //and relay ON
+    PORTD &= ~_BV(READER_LED); // ON
     _delay_ms (1000); //TODO Uncomment for real thing
     _delay_ms (1000);
     _delay_ms (1000);
     IOPORT &= ~(1 << LED_G);    //0x40;//led OFF
     IOPORT &= ~(1 << RELAY);    //RElay OFF
+    PORTD |= _BV(READER_LED); // OFF
     USARTputs ("DOOR LOCKED\r\n");
     USARTputs(EOM);
 }
@@ -533,6 +543,9 @@ main (void)
     sei ();         // enable interrupts
 // Set PORTD5-7 as outputs
     DDR_IOPORT = 0xFF;
+    // Set up PORTD
+    DDRD = _BV(READER_BEEP) | _BV(READER_LED);
+    PORTD = _BV(READER_BEEP) | _BV(READER_LED);
 // Flash all LEDs on startup
     mode = STARTUP; // Special startup mode
     for (temper = 0; temper < 10; temper++)
