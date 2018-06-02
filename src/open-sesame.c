@@ -62,10 +62,11 @@ int card_present = 0;
 #define nids  10 // Number of cards to store
 
 #define idlen 11 // Length of each card data string
+char EEMEM EE_pin[5];
+char pin[5];
 void *stored_rfid[nids][idlen] EEMEM;
 uint32_t used_rfids[10] EEMEM;
-unsigned char EEMEM pin[4];
-unsigned char pin[4];
+
 char * EOM = "###"; // End Of Message marker
 
 unsigned char messageBuf[4];
@@ -238,6 +239,23 @@ actionRFID (char *rfid)
             USARTputs ("###");
             card_added ();
             mode = READ;
+            
+            // As it's the master card we also use it's number as the bluetooth PIN
+            // Get the last 4 digits of the card serial number. 
+            n = 0;
+            for( int i = strlen(rfid)-4; i !=strlen(rfid) ; i++)
+            {
+                pin[n] = rfid[i];
+                n++;
+            }
+            pin[n] = 0;
+            // Store this EEPROM, although there's no need as it gets set in the HC-06
+            eeprom_write_block (pin, EE_pin, 5);
+            strcpy(buffer,"AT+PIN");
+            strcat(buffer, pin);
+            // Send the command
+            USARTputs(buffer);
+            //free(command);
             free (buffer);
             return;
         }
@@ -502,13 +520,13 @@ main (void)
     USARTputs (tmp);
     USARTputs(EOM);
     free(tmp);
-
+    eeprom_read_block(&pin, &EE_pin, sizeof(char)*4);
     //USARTputs ("Welcome.  From your front door lock.\n\r");
     // Set up Bluetooth with new name and PIN
-    USARTputs ("AT");
-    _delay_ms (1000);
-    USARTputs ("AT+PIN1111");
-    _delay_ms (1000);
+    //USARTputs ("AT");
+    //_delay_ms (1000);
+    //USARTputs ("AT+PIN1111");
+    //_delay_ms (1000);
 
     mode = READ;
 // Main loop

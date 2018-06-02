@@ -141,7 +141,7 @@ void send_data(uint32_t card_num)
     //site_code = (card_num >> 17) & 0xff;
     //serial_number = (card_num >> 1) & 0x7fff;
     card_num = (card_num >> 1) & 0xffffff;
-    messageBuf = malloc(sizeof(char) * 20);
+    messageBuf = malloc(sizeof(char) * 10);
     sprintf(messageBuf,"%lu", card_num );
     wiegand_off();
     actionRFID (messageBuf);
