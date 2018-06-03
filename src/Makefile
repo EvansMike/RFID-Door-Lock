@@ -31,8 +31,18 @@ AOBJS := $(COBJS:.asm=.o)
 CLSTS := $(CSRCS:.c=.lst)
 
 # The -u,vfprintf -lprintf_flt -lm are to anable sprintf and float point convertion libraries
-CFLAGS=-g -mmcu=$(MCU) $(CDEFS) -Iusbdrv -Wl,-u,vfprintf -lprintf_flt -lm -I. -I/usr/avr/include/avr/ -lm -Wall -Wstrict-prototypes -Os -mcall-prologues -DDEBUG_LEVEL=0
+#CFLAGS=-g -mmcu=$(MCU) $(CDEFS) -Iusbdrv -Wl,-u,vfprintf -lprintf_flt -lm -I. -I/usr/avr/include/avr/ -lm -Wall -Wstrict-prototypes -Os -mcall-prologues -DDEBUG_LEVEL=0
+CFLAGS = -mmcu=$(MCU) $(CDEFS) -Os
+CFLAGS += -mcall-prologues
+CFLAGS += -Wno-deprecated-declarations
+CFLAGS += -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums
+CFLAGS += -fno-inline-small-functions -mrelax
+CFLAGS += -fdata-sections -ffunction-sections
+CFLAGS += -Wl,-gc-sections
+CFLAGS += -std=gnu99
 
+# Minimalistic printf version
+LDFLAGS += -Wl,-u,vfprintf -lprintf_min
 
 all: $(PROGRAM).hex $(PROGRAM).eep libs
 
