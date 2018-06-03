@@ -35,12 +35,6 @@
 enum  {READ,LEARN,SEND,MASTER,DELETE,STARTUP,BTTEST} mode;
 
  
-void __premain(void);
-void rfidloop(void);
 void actionRFID(char* lrfid);
-void unlock_door(void);
-void handle_twi(unsigned char * data);
-
-void actionRFID(char* id);
 
 #endif

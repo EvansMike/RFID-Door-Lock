@@ -97,6 +97,7 @@ static void wait_new_card(void);
 static int delete_card(char idx);
 static void list_cards(void);
 static void check_button_status(void);
+static void master_reset (void);
 
 
 /***********************************************************************
@@ -151,15 +152,15 @@ ISR (USART_RXC_vect)
         USARTputc (key);
         break;
     }
-
-
 }
+
+
 /***********************************************************************
  * List all the keycards to serial line in the form:
  * idx num, card num, timestamp added.
  * NB: Timestamp would be nice except there's no RTC in the Atmega
  **********************************************************************/
-void list_cards()
+static void list_cards()
 {
     char *buffer;
     uint8_t n;
@@ -182,17 +183,20 @@ void list_cards()
 
 }
 
+
 /* List recently used card. */
-void list_recent()
+static void list_recent()
 {
 
 }
+
+
 /***********************************************************************
  * Delete a card at idx from the database
  * @param idx is the char code NOT the index so we hace to convert.
  * @return On success the idx of the deleted card else -1.
  **********************************************************************/
-int delete_card(char idx)
+static int delete_card(char idx)
 {
     char *buffer;
     uint8_t n;
@@ -217,8 +221,7 @@ int delete_card(char idx)
  * If the card is a user card, unlock the door.
  * TODO Add reset button to clear master card, or all cards.
  **********************************************************************/
-void
-actionRFID (char *rfid)
+void actionRFID (char *rfid)
 {
     int n;
     enum
@@ -349,13 +352,13 @@ actionRFID (char *rfid)
     free (buffer);
 }
 
+
 /*********************************************************************
  * Various LED flash functions for user feedback.
  *
  ******************************************************************* */
 /* Red 3 seconds. */
-void
-access_denied (void)
+static void access_denied (void)
 {
     USARTputs ("ACCESS DENIED\r\n");
     USARTputs (EOM);
@@ -373,10 +376,9 @@ access_denied (void)
     USARTputs(EOM);
 }
 
-/* Light green LED for 3 seconds and activate relay. */
 
-void
-access_allowed (void)
+/* Light green LED for 3 seconds and activate relay. */
+static void access_allowed (void)
 {
 
     USARTputs ("DOOR OPEN\r\n");
@@ -395,9 +397,9 @@ access_allowed (void)
     USARTputs(EOM);
 }
 
+
 /* Flash red for 3 seconds. */
-void
-card_removed (void)
+static void card_removed (void)
 {
     int n;
     IOPORT &= ~(1 << LED_G);    //Green led OFF
@@ -411,9 +413,9 @@ card_removed (void)
     PORTD &= ~(1 << LED_R); //led OFF
 }
 
+
 /* Flash green for 3 seconds. */
-void
-card_added (void)
+static void card_added (void)
 {
     int n;
     IOPORT &= ~(1 << LED_R);    //Red led OFF
@@ -428,12 +430,12 @@ card_added (void)
     IOPORT &= ~(1 << LED_R);    //0xE0;//Red led OFF
 }
 
+
 /* Wait for a new card to be scanned.
  * TODO: This needs to be a 5 second timeout that can scan AND flash at
  * the same time
  */
-void
-wait_new_card (void)
+static void wait_new_card (void)
 {
     IOPORT |= (1 << LED_G); //led ON
     //_delay_ms (100);
@@ -447,8 +449,7 @@ wait_new_card (void)
  * Press while boot LEDS are flashing .
  * May not use this bu leaving it in anyway.
  */
-void
-master_reset (void)
+static void master_reset (void)
 {
     return;
     int mr_sw, n;
@@ -485,7 +486,7 @@ master_reset (void)
 * The button(s) live on PORTX
 * Button function depends on the machine state at the time of button press
 */
-void check_button_status()
+static void check_button_status()
 {
     uint8_t button_status, n;
     button_status = PIND & 0xff;  //FIX ME
@@ -509,7 +510,7 @@ void check_button_status()
     return;
 }
 
-
+ 
 /***********************************************************************
  * MAIN YAAYYYY
  *
