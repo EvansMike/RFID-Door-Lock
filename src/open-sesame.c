@@ -476,6 +476,8 @@ static void master_reset (void)
         }
         USARTputs ("ALL CARDS RESET!\r\n");
         USARTputs(EOM);
+        //Set up Bluetooth with default PIN
+        USARTputs ("AT+PIN0000");
         RESET ();
     }
 }
@@ -533,10 +535,7 @@ main (void)
     free(tmp);
     eeprom_read_block(&pin, &EE_pin, sizeof(char)*4);
     //USARTputs ("Welcome.  From your front door lock.\n\r");
-    // Set up Bluetooth with new name and PIN
-    //USARTputs ("AT");
-    //_delay_ms (1000);
-    //USARTputs ("AT+PIN1111");
+    
     //_delay_ms (1000);
 
     mode = READ;
