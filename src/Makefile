@@ -55,12 +55,11 @@ $(COBJS) : $(CSRCS) $(HEADS) Makefile
 # Link: create ELF output file from object files
 $(PROGRAM).elf: $(COBJS)
 	$(CC) $(CFLAGS) $^ -o $@
-
+	@avr-size  --mcu=${MCU} --format=avr $(PROGRAM).elf
 
 # Create hex output file from ELF output file.
 $(PROGRAM).hex: $(PROGRAM).elf
 	$(OBJCOPY) -R .eeprom -g -O ihex $< $@
-	avr-size $(PROGRAM).hex
 
 $(PROGRAM).eep: $(PROGRAM).elf
 	$(OBJCOPY) -j .eeprom --set-section-flags=.eeprom="alloc,load" --change-section-lma .eeprom=0 -O ihex $< $@

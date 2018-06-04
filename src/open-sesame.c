@@ -67,7 +67,7 @@ char pin[5];
 void *stored_rfid[nids][idlen] EEMEM;
 uint32_t used_rfids[10] EEMEM;
 
-char * EOM = "###"; // End Of Message marker
+char * EOM = "###\r\n"; // End Of Message marker
 
 unsigned char messageBuf[4];
 
