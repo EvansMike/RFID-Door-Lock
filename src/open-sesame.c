@@ -522,6 +522,13 @@ main (void)
 {
     short temper;
     char *tmp;
+    // Set up PORTD
+    DDRD = _BV(READER_BEEP) | _BV(READER_LED);
+    PORTD = _BV(READER_BEEP) | _BV(READER_LED);
+    // Set PD6 pullup
+    PORTD |= _BV(PD6); 
+    // Check if the factory reset button in pressed
+    
     tmp = malloc(50 * sizeof(char));
     /* Initiatl UART */
     USARTInit ();
@@ -541,11 +548,7 @@ main (void)
     mode = READ;
 // Main loop
     sei ();         // enable interrupts
-// Set PORTD5-7 as outputs
-    DDR_IOPORT = 0xFF;
-    // Set up PORTD
-    DDRD = _BV(READER_BEEP) | _BV(READER_LED);
-    PORTD = _BV(READER_BEEP) | _BV(READER_LED);
+
 // Flash all LEDs on startup
     mode = STARTUP; // Special startup mode
     for (temper = 0; temper < 10; temper++)
