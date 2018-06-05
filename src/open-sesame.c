@@ -445,7 +445,7 @@ static void wait_new_card (void)
 
 
 /* If the master reset button is pressed remove all the programmed cards.
- Connect switch to PORTD4, use 10K pull-up and switch to GND.
+ Connect switch to PORTD6, use 10K pull-up and switch to GND.
  * Press while boot LEDS are flashing .
  * May not use this bu leaving it in anyway.
  */
