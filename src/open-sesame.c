@@ -96,7 +96,7 @@ static void card_removed(void);
 static void wait_new_card(void);
 static int delete_card(char idx);
 static void list_cards(void);
-static void check_button_status(void);
+//static void check_button_status(void);
 static void master_reset (void);
 
 
@@ -487,7 +487,7 @@ static void master_reset (void)
 * Check the status of THE BUTTON and do something useful .
 * The button(s) live on PORTX
 * Button function depends on the machine state at the time of button press
-*/
+*
 static void check_button_status()
 {
     uint8_t button_status, n;
@@ -511,7 +511,7 @@ static void check_button_status()
     }
     return;
 }
-
+*/
  
 /***********************************************************************
  * MAIN YAAYYYY
@@ -527,8 +527,6 @@ main (void)
     PORTD = _BV(READER_BEEP) | _BV(READER_LED);
     // Set PD6 pullup
     PORTD |= _BV(PD6); 
-    // Check if the factory reset button in pressed
-    
     tmp = malloc(50 * sizeof(char));
     /* Initiatl UART */
     USARTInit ();
@@ -553,12 +551,17 @@ main (void)
     mode = STARTUP; // Special startup mode
     for (temper = 0; temper < 10; temper++)
     {
+        // Check if the factory reset button in pressed
+        if (PIND & (1 << PD6) == 0) // Then switch is pressed
+        {
+            master_reset();
+        }
         IOPORT |= ((1 << LED_G) | (1 << LED_R));        //led ON
         _delay_ms (100);
-        check_button_status();
+        //check_button_status();
         IOPORT &= ~(1 << LED_G) & ~(1 << LED_R);        //led OFF
         _delay_ms (100);
-        check_button_status();
+        //check_button_status();
     }
     mode = READ; // Into ordinary run mode
     //master_reset(); // Only resets if button is pressed during start LEDs.
@@ -569,7 +572,7 @@ main (void)
     for (;;)            // Forever
     {
         // Check status of manual entry switch.
-        check_button_status();
+        //check_button_status();
 //sleepNow();
     }
 
