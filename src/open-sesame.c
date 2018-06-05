@@ -61,7 +61,7 @@
 int card_present = 0;
 #define nids  10 // Number of cards to store
 
-#define idlen 11 // Length of each card data string
+#define idlen 10 // Length of each card data string
 char EEMEM EE_pin[5];
 char pin[5];
 void *stored_rfid[nids][idlen] EEMEM;
@@ -242,7 +242,7 @@ void actionRFID (char *rfid)
             eeprom_write_block (rfid, stored_rfid[0], idlen);
             USARTputs ("New master ID stored.\r\n");
             USARTputs (rfid);
-            USARTputs ("###");
+            //USARTputs (EOM);
             card_added ();
             mode = READ;
             
