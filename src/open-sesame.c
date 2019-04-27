@@ -245,9 +245,9 @@ void actionRFID (char *rfid)
             //USARTputs (EOM);
             card_added ();
             mode = READ;
-            
+
             // As it's the master card we also use it's number as the bluetooth PIN
-            // Get the last 4 digits of the card serial number. 
+            // Get the last 4 digits of the card serial number.
             n = 0;
             for( int i = strlen(rfid)-4; i !=strlen(rfid) ; i++)
             {
@@ -363,14 +363,14 @@ static void access_denied (void)
     USARTputs ("ACCESS DENIED\r\n");
     USARTputs (EOM);
     IOPORT |= (1 << LED_R); //&= ~0x0F;//led ON and relay ON
-    PORTD &= ~_BV(READER_BEEP); // ON
+    //PORTD &= ~_BV(READER_BEEP); // ON
     _delay_ms (1000);
-    PORTD |= _BV(READER_BEEP); // OFF
+    //PORTD |= _BV(READER_BEEP); // OFF
     _delay_ms (1000);
-    PORTD &= ~_BV(READER_BEEP); // ON
+    //PORTD &= ~_BV(READER_BEEP); // ON
     _delay_ms (1000);//TODO Uncomment for real thing
     _delay_ms (1000);
-    PORTD |= _BV(READER_BEEP); // OFF
+    //PORTD |= _BV(READER_BEEP); // OFF
     IOPORT &= ~(1 << LED_R);    //0x40;//led OFF
     USARTputs ("TRY AGAIN?\r\n");
     USARTputs(EOM);
@@ -386,13 +386,13 @@ static void access_allowed (void)
     // Light GREEN LED
     IOPORT |= (1 << LED_G); //&= ~0x0F;//led ON
     IOPORT |= (1 << RELAY); //and relay ON
-    PORTD &= ~_BV(READER_LED); // ON
+    //PORTD &= ~_BV(READER_LED); // ON
     _delay_ms (1000); //TODO Uncomment for real thing
     _delay_ms (1000);
     _delay_ms (1000);
     IOPORT &= ~(1 << LED_G);    //0x40;//led OFF
     IOPORT &= ~(1 << RELAY);    //RElay OFF
-    PORTD |= _BV(READER_LED); // OFF
+    //PORTD |= _BV(READER_LED); // OFF
     USARTputs ("DOOR LOCKED\r\n");
     USARTputs(EOM);
 }
@@ -485,7 +485,7 @@ static void master_reset (void)
 
 /***********************************************************************
 * Check the status of THE BUTTON and do something useful .
-* The button(s) live on PORTX
+* The button(s) lives on PD6
 * Button function depends on the machine state at the time of button press
 *
 static void check_button_status()
@@ -512,7 +512,7 @@ static void check_button_status()
     return;
 }
 */
- 
+
 /***********************************************************************
  * MAIN YAAYYYY
  *
@@ -523,10 +523,10 @@ main (void)
     short temper;
     char *tmp;
     // Set up PORTD
-    DDRD = _BV(READER_BEEP) | _BV(READER_LED);
-    PORTD = _BV(READER_BEEP) | _BV(READER_LED);
+    //DDRD = _BV(READER_BEEP) | _BV(READER_LED);
+    //PORTD = _BV(READER_BEEP) | _BV(READER_LED);
     // Set PD6 pullup
-    PORTD |= _BV(PD6); 
+    PORTD |= _BV(PD6);
     tmp = malloc(50 * sizeof(char));
     /* Initiatl UART */
     USARTInit ();
@@ -540,10 +540,7 @@ main (void)
     free(tmp);
     eeprom_read_block(&pin, &EE_pin, sizeof(char)*4);
     //USARTputs ("Welcome.  From your front door lock.\n\r");
-    
-    //_delay_ms (1000);
 
-    mode = READ;
 // Main loop
     sei ();         // enable interrupts
 
