@@ -1,85 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:sesame-03-rescue
-LIBS:74xgxx
-LIBS:74xx
-LIBS:ac-dc
-LIBS:actel
-LIBS:adc-dac
-LIBS:Altera
-LIBS:analog_devices
-LIBS:analog_switches
-LIBS:atmel
-LIBS:audio
-LIBS:battery_management
-LIBS:bbd
-LIBS:brooktre
-LIBS:cmos4000
-LIBS:cmos_ieee
-LIBS:conn
-LIBS:contrib
-LIBS:cypress
-LIBS:dc-dc
-LIBS:device
-LIBS:digital-audio
-LIBS:diode
-LIBS:display
-LIBS:dsp
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:hc11
-LIBS:intel
-LIBS:interface
-LIBS:ir
-LIBS:Lattice
-LIBS:linear
-LIBS:maxim
-LIBS:memory
-LIBS:microchip
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic32mcu
-LIBS:microcontrollers
-LIBS:motor_drivers
-LIBS:motorola
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp_armmcu
-LIBS:onsemi
-LIBS:opto
-LIBS:Oscillators
-LIBS:philips
-LIBS:power
-LIBS:powerint
-LIBS:Power_Management
-LIBS:pspice
-LIBS:references
-LIBS:regul
-LIBS:relays
-LIBS:rfcom
-LIBS:sensors
-LIBS:silabs
-LIBS:siliconi
-LIBS:stm8
-LIBS:stm32
-LIBS:supertex
-LIBS:switches
-LIBS:texas
-LIBS:transf
-LIBS:transistors
-LIBS:ttl_ieee
-LIBS:valves
-LIBS:video
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:xilinx
-LIBS:Zilog
+EESchema Schematic File Version 4
 LIBS:sesame-03-cache
-EELAYER 25 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -94,159 +15,400 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ATMEGA8-P IC1
+L sesame-03-rescue:ATMEGA8-P IC1
 U 1 1 57A9C9B0
 P 3700 3500
 F 0 "IC1" H 2950 4800 50  0000 L BNN
 F 1 "ATMEGA8-P" H 4200 2050 50  0000 L BNN
 F 2 "Housings_DIP:DIP-28_W7.62mm_LongPads" H 3700 3500 50  0001 C CIN
-F 3 "" H 3700 3500 50  0000 C CNN
+F 3 "NA" H 3700 3500 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    3700 3500
 	1    0    0    -1  
 $EndComp
 $Comp
-L D D3
+L device:D D3
 U 1 1 57A9CB7C
 P 6250 3900
 F 0 "D3" H 6250 4000 50  0000 C CNN
 F 1 "1N4148" H 6250 3800 50  0000 C CNN
 F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 6250 3900 50  0001 C CNN
-F 3 "" H 6250 3900 50  0000 C CNN
+F 3 "NA" H 6250 3900 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    6250 3900
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L device:R R3
 U 1 1 57A9CC07
 P 6700 3550
 F 0 "R3" V 6780 3550 50  0000 C CNN
 F 1 "3K3" V 6700 3550 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 6630 3550 50  0001 C CNN
-F 3 "" H 6700 3550 50  0000 C CNN
+F 3 "NA" H 6700 3550 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    6700 3550
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L device:R R2
 U 1 1 57A9CC92
 P 5100 3400
 F 0 "R2" V 5180 3400 50  0000 C CNN
 F 1 "330R" V 5100 3400 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 5030 3400 50  0001 C CNN
-F 3 "" H 5100 3400 50  0000 C CNN
+F 3 "NA" H 5100 3400 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    5100 3400
 	0    1    1    0   
 $EndComp
 $Comp
-L R R4
+L device:R R4
 U 1 1 57A9CD19
 P 9150 4800
 F 0 "R4" V 9230 4800 50  0000 C CNN
 F 1 "470R" V 9150 4800 50  0000 C CNN
 F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 9080 4800 50  0001 C CNN
-F 3 "" H 9150 4800 50  0000 C CNN
+F 3 "NA" H 9150 4800 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    9150 4800
 	0    1    1    0   
 $EndComp
 $Comp
-L LED-RESCUE-sesame-03 D2
+L sesame-03-rescue:LED-RESCUE-sesame-03 D2
 U 1 1 57A9CD5C
 P 5700 3400
 F 0 "D2" H 5700 3500 50  0000 C CNN
-F 1 "LED" H 5700 3300 50  0000 C CNN
+F 1 "GREEN" H 5700 3300 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 5700 3400 50  0001 C CNN
-F 3 "" H 5700 3400 50  0000 C CNN
+F 3 "NA" H 5700 3400 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    5700 3400
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED-RESCUE-sesame-03 D1
+L sesame-03-rescue:LED-RESCUE-sesame-03 D1
 U 1 1 57A9CD8B
 P 5700 3100
 F 0 "D1" H 5700 3200 50  0000 C CNN
-F 1 "LED" H 5700 3000 50  0000 C CNN
+F 1 "RED" H 5700 3000 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 5700 3100 50  0001 C CNN
-F 3 "" H 5700 3100 50  0000 C CNN
+F 3 "NA" H 5700 3100 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    5700 3100
 	-1   0    0    1   
 $EndComp
 $Comp
-L LED-RESCUE-sesame-03 D4
+L sesame-03-rescue:LED-RESCUE-sesame-03 D4
 U 1 1 57A9CDD8
 P 9500 5000
 F 0 "D4" H 9500 5100 50  0000 C CNN
 F 1 "LED" H 9500 4900 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 9500 5000 50  0001 C CNN
-F 3 "" H 9500 5000 50  0000 C CNN
+F 3 "NA" H 9500 5000 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
 	1    9500 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +3.3V #PWR01
+L power1:+3.3V #PWR01
 U 1 1 57A9CEED
 P 6700 3150
 F 0 "#PWR01" H 6700 3000 50  0001 C CNN
 F 1 "+3.3V" H 6700 3290 50  0000 C CNN
-F 2 "" H 6700 3150 50  0000 C CNN
-F 3 "" H 6700 3150 50  0000 C CNN
+F 2 "NA" H 6700 3150 50  0000 C CNN
+F 3 "NA" H 6700 3150 50  0000 C CNN
 	1    6700 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L power1:+5V #PWR02
 U 1 1 57A9CF19
 P 2200 2550
 F 0 "#PWR02" H 2200 2400 50  0001 C CNN
 F 1 "+5V" H 2200 2690 50  0000 C CNN
-F 2 "" H 2200 2550 50  0000 C CNN
-F 3 "" H 2200 2550 50  0000 C CNN
+F 2 "NA" H 2200 2550 50  0000 C CNN
+F 3 "NA" H 2200 2550 50  0000 C CNN
 	1    2200 2550
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power1:GND #PWR03
 U 1 1 57A9CF3D
 P 3700 5250
 F 0 "#PWR03" H 3700 5000 50  0001 C CNN
 F 1 "GND" H 3700 5100 50  0000 C CNN
-F 2 "" H 3700 5250 50  0000 C CNN
-F 3 "" H 3700 5250 50  0000 C CNN
+F 2 "NA" H 3700 5250 50  0000 C CNN
+F 3 "NA" H 3700 5250 50  0000 C CNN
 	1    3700 5250
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power1:GND #PWR04
 U 1 1 57A9CF67
 P 9100 5650
 F 0 "#PWR04" H 9100 5400 50  0001 C CNN
 F 1 "GND" H 9100 5500 50  0000 C CNN
-F 2 "" H 9100 5650 50  0000 C CNN
-F 3 "" H 9100 5650 50  0000 C CNN
+F 2 "NA" H 9100 5650 50  0000 C CNN
+F 3 "NA" H 9100 5650 50  0000 C CNN
 	1    9100 5650
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L power1:GND #PWR05
 U 1 1 57A9CF8A
 P 2200 2800
 F 0 "#PWR05" H 2200 2550 50  0001 C CNN
 F 1 "GND" H 2200 2650 50  0000 C CNN
-F 2 "" H 2200 2800 50  0000 C CNN
-F 3 "" H 2200 2800 50  0000 C CNN
+F 2 "NA" H 2200 2800 50  0000 C CNN
+F 3 "NA" H 2200 2800 50  0000 C CNN
 	1    2200 2800
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR06
+L power1:+5V #PWR06
 U 1 1 57A9CFAD
 P 3700 1700
 F 0 "#PWR06" H 3700 1550 50  0001 C CNN
 F 1 "+5V" H 3700 1840 50  0000 C CNN
-F 2 "" H 3700 1700 50  0000 C CNN
-F 3 "" H 3700 1700 50  0000 C CNN
+F 2 "NA" H 3700 1700 50  0000 C CNN
+F 3 "NA" H 3700 1700 50  0000 C CNN
 	1    3700 1700
 	1    0    0    -1  
 $EndComp
+$Comp
+L sesame-03-rescue:HC-06 U1
+U 1 1 57A9E29D
+P 8000 4500
+F 0 "U1" H 7450 5450 50  0000 C CNN
+F 1 "HC-06" H 8450 5450 50  0000 C CNN
+F 2 "SMD_Packages:HC-05" H 8000 3700 50  0001 C CNN
+F 3 "NA" H 8000 3700 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    8000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR07
+U 1 1 57A9E439
+P 7000 5200
+F 0 "#PWR07" H 7000 4950 50  0001 C CNN
+F 1 "GND" H 7000 5050 50  0000 C CNN
+F 2 "NA" H 7000 5200 50  0000 C CNN
+F 3 "NA" H 7000 5200 50  0000 C CNN
+	1    7000 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR08
+U 1 1 57A9E45F
+P 6000 3500
+F 0 "#PWR08" H 6000 3250 50  0001 C CNN
+F 1 "GND" H 6000 3350 50  0000 C CNN
+F 2 "NA" H 6000 3500 50  0000 C CNN
+F 3 "NA" H 6000 3500 50  0000 C CNN
+	1    6000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R1
+U 1 1 57A9ECD4
+P 5100 3100
+F 0 "R1" V 5180 3100 50  0000 C CNN
+F 1 "330R" V 5100 3100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 5030 3100 50  0001 C CNN
+F 3 "NA" H 5100 3100 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    5100 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L sesame-03-rescue:RM50-xx11 RL1
+U 1 1 57A9E159
+P 5650 5200
+F 0 "RL1" H 6100 5350 50  0000 L CNN
+F 1 "RM50-xx11" H 6100 5250 50  0000 L CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 5650 5200 50  0001 C CNN
+F 3 "NA" H 5650 5200 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    5650 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:D D5
+U 1 1 57A9E21D
+P 5000 5200
+F 0 "D5" H 5000 5300 50  0000 C CNN
+F 1 "1N4004" H 5000 5100 50  0000 C CNN
+F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5000 5200 50  0001 C CNN
+F 3 "NA" H 5000 5200 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    5000 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L power1:GND #PWR09
+U 1 1 57A9E2AD
+P 5450 6350
+F 0 "#PWR09" H 5450 6100 50  0001 C CNN
+F 1 "GND" H 5450 6200 50  0000 C CNN
+F 2 "NA" H 5450 6350 50  0000 C CNN
+F 3 "NA" H 5450 6350 50  0000 C CNN
+	1    5450 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:PN2222A Q1
+U 1 1 57A9E338
+P 5350 5900
+F 0 "Q1" H 5550 5975 50  0000 L CNN
+F 1 "PN2222A" H 5550 5900 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 5550 5825 50  0001 L CIN
+F 3 "NA" H 5350 5900 50  0000 L CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R5
+U 1 1 57A9E992
+P 4850 4450
+F 0 "R5" V 4930 4450 50  0000 C CNN
+F 1 "3K3" V 4850 4450 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 4450 50  0001 C CNN
+F 3 "NA" H 4850 4450 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    4850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L sesame-03-rescue:SW_PUSH_SMALL_H SW1
+U 1 1 57A9ECAE
+P 5400 4400
+F 0 "SW1" H 5400 4350 50  0000 C CNN
+F 1 "SW" H 5400 4400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5400 4600 50  0001 C CNN
+F 3 "NA" H 5400 4600 50  0000 C CNN
+F 4 "NA" H 0   0   50  0001 C CNN "MFR"
+F 5 "NA" H 0   0   50  0001 C CNN "MPN"
+F 6 "NA" H 0   0   50  0001 C CNN "SPR"
+F 7 "NA" H 0   0   50  0001 C CNN "SPN"
+F 8 "NA" H 0   0   50  0001 C CNN "SPURL"
+	1    5400 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L conn:Conn_01x07 J?
+U 1 1 5B1276C8
+P 5450 1550
+F 0 "J?" H 5450 1950 50  0000 C CNN
+F 1 "PROG" H 5450 1150 50  0000 C CNN
+F 2 "NA" H 5450 1550 50  0001 C CNN
+F 3 "NA" H 5450 1550 50  0001 C CNN
+	1    5450 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power1:GND #PWR?
+U 1 1 5B127CBD
+P 5550 2000
+F 0 "#PWR?" H 5550 1750 50  0001 C CNN
+F 1 "GND" H 5550 1850 50  0000 C CNN
+F 2 "NA" H 5550 2000 50  0000 C CNN
+F 3 "NA" H 5550 2000 50  0000 C CNN
+	1    5550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:+5V #PWR?
+U 1 1 5B127D2E
+P 6000 1650
+F 0 "#PWR?" H 6000 1500 50  0001 C CNN
+F 1 "+5V" H 6000 1790 50  0000 C CNN
+F 2 "NA" H 6000 1650 50  0000 C CNN
+F 3 "NA" H 6000 1650 50  0000 C CNN
+	1    6000 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:GND #PWR?
+U 1 1 5B164ABE
+P 5700 4400
+F 0 "#PWR?" H 5700 4150 50  0001 C CNN
+F 1 "GND" H 5700 4250 50  0000 C CNN
+F 2 "NA" H 5700 4400 50  0000 C CNN
+F 3 "NA" H 5700 4400 50  0000 C CNN
+	1    5700 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 5950 4700 2    60   Input ~ 0
+12VDC
+Text GLabel 5850 5700 2    60   Input ~ 0
+STRIKER
+Text GLabel 5150 4100 2    45   Input ~ 0
+WIEGAND_+
+Text GLabel 5150 4000 2    45   Input ~ 0
+WIEGAND_-
+Text GLabel 5150 4200 2    45   Input ~ 0
+READER_BEEP
+Text GLabel 5150 4300 2    45   Input ~ 0
+READER_LED
 Wire Wire Line
 	4700 3900 6100 3900
 Wire Wire Line
@@ -259,42 +421,8 @@ Wire Wire Line
 	6700 3150 6700 3250
 Wire Wire Line
 	6700 3250 6700 3400
-$Comp
-L HC-06 U1
-U 1 1 57A9E29D
-P 8000 4500
-F 0 "U1" H 7450 5450 50  0000 C CNN
-F 1 "HC-06" H 8450 5450 50  0000 C CNN
-F 2 "SMD_Packages:HC-05" H 8000 3700 50  0001 C CNN
-F 3 "" H 8000 3700 50  0000 C CNN
-	1    8000 4500
-	1    0    0    -1  
-$EndComp
-Connection ~ 6700 3900
 Wire Wire Line
 	4700 3800 7300 3800
-$Comp
-L GND #PWR07
-U 1 1 57A9E439
-P 7000 5200
-F 0 "#PWR07" H 7000 4950 50  0001 C CNN
-F 1 "GND" H 7000 5050 50  0000 C CNN
-F 2 "" H 7000 5200 50  0000 C CNN
-F 3 "" H 7000 5200 50  0000 C CNN
-	1    7000 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR08
-U 1 1 57A9E45F
-P 6000 3500
-F 0 "#PWR08" H 6000 3250 50  0001 C CNN
-F 1 "GND" H 6000 3350 50  0000 C CNN
-F 2 "" H 6000 3500 50  0000 C CNN
-F 3 "" H 6000 3500 50  0000 C CNN
-	1    6000 3500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8700 4800 9000 4800
 Wire Wire Line
@@ -309,15 +437,10 @@ Wire Wire Line
 	9100 5500 9100 5650
 Wire Wire Line
 	8400 5500 8400 5400
-Connection ~ 9100 5500
 Wire Wire Line
 	7300 5000 7000 5000
 Wire Wire Line
 	7000 5000 7000 5200
-Wire Wire Line
-	2200 2800 2450 2800
-Wire Wire Line
-	2450 2800 2800 2800
 Wire Wire Line
 	2800 2600 2200 2600
 Wire Wire Line
@@ -326,17 +449,6 @@ Wire Wire Line
 	3700 1700 3700 2100
 Wire Wire Line
 	3700 5000 3700 5250
-$Comp
-L R R1
-U 1 1 57A9ECD4
-P 5100 3100
-F 0 "R1" V 5180 3100 50  0000 C CNN
-F 1 "330R" V 5100 3100 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 5030 3100 50  0001 C CNN
-F 3 "" H 5100 3100 50  0000 C CNN
-	1    5100 3100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4700 3100 4950 3100
 Wire Wire Line
@@ -349,61 +461,12 @@ Wire Wire Line
 	6000 3400 6000 3500
 Wire Wire Line
 	5900 3400 6000 3400
-Connection ~ 6000 3400
 Wire Wire Line
 	5500 3400 5250 3400
 Wire Wire Line
 	4950 3400 4700 3400
-$Comp
-L RM50-xx11 RL1
-U 1 1 57A9E159
-P 5650 5200
-F 0 "RL1" H 6100 5350 50  0000 L CNN
-F 1 "RM50-xx11" H 6100 5250 50  0000 L CNN
-F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 5650 5200 50  0001 C CNN
-F 3 "" H 5650 5200 50  0000 C CNN
-	1    5650 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L D D5
-U 1 1 57A9E21D
-P 5000 5200
-F 0 "D5" H 5000 5300 50  0000 C CNN
-F 1 "1N4004" H 5000 5100 50  0000 C CNN
-F 2 "Diodes_ThroughHole:Diode_DO-35_SOD27_Horizontal_RM10" H 5000 5200 50  0001 C CNN
-F 3 "" H 5000 5200 50  0000 C CNN
-	1    5000 5200
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR09
-U 1 1 57A9E2AD
-P 5450 6350
-F 0 "#PWR09" H 5450 6100 50  0001 C CNN
-F 1 "GND" H 5450 6200 50  0000 C CNN
-F 2 "" H 5450 6350 50  0000 C CNN
-F 3 "" H 5450 6350 50  0000 C CNN
-	1    5450 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L PN2222A Q1
-U 1 1 57A9E338
-P 5350 5900
-F 0 "Q1" H 5550 5975 50  0000 L CNN
-F 1 "PN2222A" H 5550 5900 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 5550 5825 50  0001 L CIN
-F 3 "" H 5350 5900 50  0000 L CNN
-	1    5350 5900
-	1    0    0    -1  
-$EndComp
-Text GLabel 5950 4700 2    60   Input ~ 0
-12VDC
 Wire Wire Line
 	5950 4900 5950 4700
-Text GLabel 5850 5700 2    60   Input ~ 0
-STRIKER
 Wire Wire Line
 	5850 5500 5850 5700
 Wire Wire Line
@@ -420,50 +483,67 @@ Wire Wire Line
 	5000 5350 5000 5600
 Wire Wire Line
 	5000 5600 5450 5600
-Connection ~ 5450 5600
 Wire Wire Line
 	4700 3600 4850 3600
 Wire Wire Line
 	4850 5900 5150 5900
-$Comp
-L R R5
-U 1 1 57A9E992
-P 4850 4450
-F 0 "R5" V 4930 4450 50  0000 C CNN
-F 1 "3K3" V 4850 4450 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 4780 4450 50  0001 C CNN
-F 3 "" H 4850 4450 50  0000 C CNN
-	1    4850 4450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4850 3600 4850 4300
 Wire Wire Line
 	4850 4600 4850 5900
 Wire Wire Line
 	5450 6100 5450 6350
-$Comp
-L SW_PUSH_SMALL_H SW1
-U 1 1 57A9ECAE
-P 5400 4400
-F 0 "SW1" H 5400 4350 50  0000 C CNN
-F 1 "SW" H 5400 4400 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 5400 4600 50  0001 C CNN
-F 3 "" H 5400 4600 50  0000 C CNN
-	1    5400 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2750 2400 2800 2400
-Connection ~ 2450 2800
-Text GLabel 5150 4100 2    45   Input ~ 0
-WIEGAND_+
-Text GLabel 5150 4000 2    45   Input ~ 0
-WIEGAND_-
 Wire Wire Line
 	4700 4000 5150 4000
 Wire Wire Line
 	5150 4100 4700 4100
+Wire Wire Line
+	7300 4900 7000 4900
+Wire Wire Line
+	7000 4900 7000 3250
+Wire Wire Line
+	7000 3250 6700 3250
+Wire Wire Line
+	4700 2700 5150 2700
+Wire Wire Line
+	5150 2700 5150 1750
+Wire Wire Line
+	4700 2800 5250 2800
+Wire Wire Line
+	5250 2800 5250 1750
+Wire Wire Line
+	4700 2900 5350 2900
+Wire Wire Line
+	5350 2900 5350 1750
+Wire Wire Line
+	2750 2000 5450 2000
+Wire Wire Line
+	5450 2000 5450 1750
+Wire Wire Line
+	5550 2000 5550 1750
+Wire Wire Line
+	5750 1750 5750 1850
+Wire Wire Line
+	5750 1850 6000 1850
+Wire Wire Line
+	6000 1850 6000 1650
+Wire Wire Line
+	4700 4200 5150 4200
+Wire Wire Line
+	4700 4300 5150 4300
+Wire Wire Line
+	2750 2400 2750 2000
+Wire Wire Line
+	4700 4400 5250 4400
+Wire Wire Line
+	5550 4400 5700 4400
+Connection ~ 6700 3900
+Connection ~ 9100 5500
+Connection ~ 6000 3400
+Connection ~ 5450 5600
+Connection ~ 6700 3250
 NoConn ~ 7300 4000
 NoConn ~ 7300 4100
 NoConn ~ 7300 4200
@@ -492,96 +572,9 @@ NoConn ~ 8700 4100
 NoConn ~ 8700 4000
 NoConn ~ 8700 3900
 NoConn ~ 8700 3800
-Wire Wire Line
-	7300 4900 7000 4900
-Wire Wire Line
-	7000 4900 7000 3250
-Wire Wire Line
-	7000 3250 6700 3250
-Connection ~ 6700 3250
 NoConn ~ 5750 4900
 NoConn ~ 2800 2700
-$Comp
-L Conn_01x07 J?
-U 1 1 5B1276C8
-P 5450 1550
-F 0 "J?" H 5450 1950 50  0000 C CNN
-F 1 "PROG" H 5450 1150 50  0000 C CNN
-F 2 "" H 5450 1550 50  0001 C CNN
-F 3 "" H 5450 1550 50  0001 C CNN
-	1    5450 1550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4700 2700 5150 2700
-Wire Wire Line
-	5150 2700 5150 1750
-Wire Wire Line
-	4700 2800 5250 2800
-Wire Wire Line
-	5250 2800 5250 1750
-Wire Wire Line
-	4700 2900 5350 2900
-Wire Wire Line
-	5350 2900 5350 1750
-Wire Wire Line
-	2750 2000 5450 2000
-Wire Wire Line
-	5450 2000 5450 1750
 NoConn ~ 5650 1750
-$Comp
-L GND #PWR?
-U 1 1 5B127CBD
-P 5550 2000
-F 0 "#PWR?" H 5550 1750 50  0001 C CNN
-F 1 "GND" H 5550 1850 50  0000 C CNN
-F 2 "" H 5550 2000 50  0000 C CNN
-F 3 "" H 5550 2000 50  0000 C CNN
-	1    5550 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 5B127D2E
-P 6000 1650
-F 0 "#PWR?" H 6000 1500 50  0001 C CNN
-F 1 "+5V" H 6000 1790 50  0000 C CNN
-F 2 "" H 6000 1650 50  0000 C CNN
-F 3 "" H 6000 1650 50  0000 C CNN
-	1    6000 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5550 2000 5550 1750
-Wire Wire Line
-	5750 1750 5750 1850
-Wire Wire Line
-	5750 1850 6000 1850
-Wire Wire Line
-	6000 1850 6000 1650
-Text GLabel 5150 4200 2    45   Input ~ 0
-READER_BEEP
-Text GLabel 5150 4300 2    45   Input ~ 0
-READER_LED
-Wire Wire Line
-	4700 4200 5150 4200
-Wire Wire Line
-	4700 4300 5150 4300
-Wire Wire Line
-	2750 2400 2750 2000
-$Comp
-L GND #PWR?
-U 1 1 5B164ABE
-P 5700 4400
-F 0 "#PWR?" H 5700 4150 50  0001 C CNN
-F 1 "GND" H 5700 4250 50  0000 C CNN
-F 2 "" H 5700 4400 50  0000 C CNN
-F 3 "" H 5700 4400 50  0000 C CNN
-	1    5700 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 4400 5250 4400
-Wire Wire Line
-	5550 4400 5700 4400
+	2200 2800 2800 2800
 $EndSCHEMATC
