@@ -169,8 +169,6 @@ static void list_cards()
     USARTputs ("idx, number\r\n");
     for (n = 0; n < nids; n++) // 0 is the master card
         {
-            //if (strncmp (0, buffer, idlen) == 0)
-            //    break;
             sprintf(buffer, "%d, ",n);
             USARTputs (buffer);
             eeprom_read_block (buffer, stored_rfid[n], idlen);
@@ -228,7 +226,7 @@ void actionRFID (char *rfid)
     { LOCKED, OPEN, DENIED, GRANTED } condition;
     char *buffer;
     condition = LOCKED;
-    buffer = malloc (sizeof (char) * idlen);
+    buffer = malloc (1 + (sizeof (char) * idlen));
     USARTputs ("\r\n");
     USARTputs (rfid);
     USARTputs(EOM);
@@ -261,7 +259,6 @@ void actionRFID (char *rfid)
             strcat(buffer, pin);
             // Send the command
             USARTputs(buffer);
-            //free(command);
             free (buffer);
             rfid = 0;
             return;
@@ -438,9 +435,7 @@ static void card_added (void)
 static void wait_new_card (void)
 {
     IOPORT |= (1 << LED_G); //led ON
-    //_delay_ms (100);
     IOPORT |= (1 << LED_R); //led ON
-    //_delay_ms (100);
 }
 
 
